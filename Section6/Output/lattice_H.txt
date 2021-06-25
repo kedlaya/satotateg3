@@ -1,0 +1,71 @@
+L:=[
+[]
+,
+[ "H" ]
+,
+[ "H" ]
+,
+[ "H" ]
+,
+[ "H" ]
+,
+[ "H" ]
+,
+[ "H" ]
+,
+[ "H_{ab}" ]
+,
+[ "H_{ab}" ]
+,
+[ "H_a", "H_{ab}", "H_a" ]
+,
+[ "H_{ab}", "H_{abc}", "H_a" ]
+,
+[ "H_{ab}", "H_{ab}", "H_{ab}" ]
+,
+[ "H_a", "H_{ct}", "H_t" ]
+,
+[ "H_{ab}", "H_t", "H_t" ]
+,
+[ "H_{ab}", "H_{ct}", "H_{ct}" ]
+,
+[ "H_t", "H_{ct}", "H_{abc}" ]
+,
+[ "H_{abc}", "H_s" ]
+,
+[ "H_t", "H_s" ]
+,
+[ "H_{ct}", "H_s" ]
+,
+[ "H_{a,bc}", "H_{act}", "H_{at}" ]
+,
+[ "H_{a,b}", "H_{ab,bc}", "H_{a,bc}", "H_{a,bc}", "H_{a,b}", "H_{a,bc}", 
+"H_{a,b}" ]
+,
+[ "H_{ab,t}", "H_{abc,t}", "H_{ab,ct}", "H_{abc,t}", "H_{a,bc}", "H_{c,t}", 
+"H_{c,t}" ]
+,
+[ "H_{a,b}", "H_{at}", "H_{ab,t}" ]
+,
+[ "H_{ab,t}", "H_{act}", "H_{ab,bc}" ]
+,
+[ "H_{a,b}", "H_{act}", "H_{ab,ct}" ]
+,
+[ "H_{ab,bc}", "H_{at}", "H_{ab,ct}" ]
+,
+[ "H_{abc,t}", "H_{abct,s}", "H_{abc,s}", "H_{s,t}" ]
+,
+[ "H_s", "H_{ab,bc}" ]
+,
+[ "H_{a,b,t}", "H_{ab,bc,ct}", "H_{a,b,ct}", "H_{ab,bc,t}", "H_{a,b,c}", 
+"H_{c,at}", "H_{ab,c,t}" ]
+,
+[ "H_{abc,s}", "H_{a,b,c}", "H_{ab,bc,s}" ]
+,
+[ "H_{s,t}", "H_{ab,bc,t}", "H_{ab,bc,s}" ]
+,
+[ "H_{abct,s}", "H_{ab,bc,ct}", "H_{ab,bc,s}" ]
+,
+[ "H_{abc,s,t}", "H_{a,b,c,t}", "H_{ab,bc,s,t}", "H_{a,b,c,s}", "H_{ab,bc,at,s}"
+]
+];

@@ -1,0 +1,17 @@
+L:=[
+"FxSU(2)"
+,
+"F_axSU(2)"
+,
+"F_{ab}xSU(2)"
+,
+"F_{ac}xSU(2)"
+,
+"F_{a,b}xSU(2)"
+,
+"F_cxSU(2)"
+,
+"F_{ab,c}xSU(2)"
+,
+"F_{a,b,c}xSU(2)"
+];

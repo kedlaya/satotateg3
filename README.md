@@ -1,5 +1,6 @@
 # satotateg3
-This repository consists of code associated to the paper "Sato-Tate groups of abelian threefolds" (Fite, Kedlaya, Sutherland).
+This repository consists of code associated to the paper [*Sato-Tate groups of abelian threefolds*](http://arxiv.org/abs/2106.13759
+) (Fite, Kedlaya, Sutherland).
 This code depends on the following software packages:
 
 - SageMath (tested with version 9.3)

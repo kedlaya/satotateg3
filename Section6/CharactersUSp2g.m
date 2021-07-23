@@ -149,6 +149,24 @@ mult_id:=function(p)
 	return val;
 end function;
 
-
+//Given a characteristic function p of USp(2*g), returns its decomposition into irreducible factors.
+irred_dec:=function(p)
+    irred:=[];
+    muirred:=[];
+	if p eq 0 then return 0; end if;
+	we:=weights(p);	
+	mu:=multiplicities(p);
+	val:=p;
+	for i in [1..#we] do
+		if not (coef_of(val,we[i]) eq 0) then
+			ch:=character(we[i]);
+			irred:=Append(irred, we[i] );
+			k:=coef_of(val,we[i])/coef_of(ch,we[i]);
+			muirred:=Append(muirred,k);
+			val:=val-k*ch;	
+		end if;
+	end for;
+	return <irred,muirred>;
+end function;
 
 

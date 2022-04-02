@@ -32,6 +32,40 @@ def ritzenthaler_romagny(f, g, h, c=1):
     (a1, b1, c1) = tuple(P(list(i)) for i in B.rows())
     return b1*(b1^2-a1*c1)
 
+## Example 8.3 -- U(3)
+G0 = magma.GU(3, 7)
+l0 = [i for i in G0.Generators()]
+l1 = [[[i[j,k] for k in range(1,4)] for j in range(1,4)] for i in l0]
+F.<a> = GF(7^2)
+l2 = [[[F(0) if i[j][k]==0 else a^(i[j][k].Log()) for k in range(3)] for j in range(3)] for i in l1]
+l3 = [[[i[j][k].polynomial().list() for k in range(3)] for j in range(3)] for i in l2]
+for i in l3:
+    for j in range(3):
+        for k in range(3):
+            while len(i[j][k]) < 2:
+                i[j][k].append(0)
+t = [(a^i).matrix() for i in range(2)]
+F0 = GF(7)
+l4 = [block_matrix(F0, 3, 3, [i[j][k][0]*t[0]+i[j][k][1]*t[1] for j in range(3) for k in range(3)], subdivide=False) for i in l3]
+G = GL(6, 7)
+G1 = G.subgroup(l4)
+assert G0.Order() == G1.order()
+G2 = G1.gap().CentralizerInParent()
+l5 = [i.matrix() for i in G2.GeneratorsOfMagma()]
+G3 = magma.GL(6, 7).sub([magma(i) for i in l4+l5])
+l = [H.get_magma_attribute('subgroup') for H in G3.MaximalSubgroups()]
+P.<T> = F0[]
+l2 = [[t[3].CharacteristicPolynomial().sage() for t in H.ConjugacyClasses()] for H in l]
+l3 = [[t(T) for t in i] for i in l2]
+Q.<x> = QQ[]
+f = x^7 + 3*x^5 + 4*x^3 + 2*x
+C = HyperellipticCurve(f)
+primes = [3]
+cp = [C.change_ring(GF(p)).frobenius_polynomial()(T) for p in primes]
+assert not any(all(u in i for u in cp) for i in l3)
+assert cp == [T^6 + 6*T^4 + 4*T^2 + 6]
+print("Example 8.3 -- U(3) verified")
+
 P.<x,y> = QQ[]
 P1.<t> = QQ[]
 

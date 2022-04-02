@@ -41,7 +41,7 @@ The file "moments_*.txt" contains the list of the 12-simplices of moments (as de
 The file "zvectors_*.txt" contains a list of 23-tuples of rational numbers for each of the Sato-Tate groups of type * (in the order prescribed by "names_*.txt"). This tuple contains enough information to reconstruct the matrix of point densities (as defined in [Sec. 6, FKS21]). More precisely, this tuple is
 
 (z_1,z_2^(-1),z_2^0,z_2^1,z_2^2,z_2^3,z_3,z_{12}^(-1),z_{12}^0,z_{12}^1,z_{12}^2,z_{12}^3,
-z_3,z_{23}^(-1),z_{23}^0,z_{23}^1,z_{23}^2,z_{23}^3,z_{123}^(-1),z_{123}^0,z_{123}^1,z_{123}^2,z_{123}^3) 
+z_{13},z_{23}^(-1),z_{23}^0,z_{23}^1,z_{23}^2,z_{23}^3,z_{123}^(-1),z_{123}^0,z_{123}^1,z_{123}^2,z_{123}^3) 
 
 
 B) The files
@@ -80,8 +80,6 @@ The file "common_functions.m" is called by "type_*.m" for every type *. It conta
 
 The file "charactersUSp2g.m" contains the functions necessary to work with the characters of USp(2g). It assumes that a value of "g" has been given and that the field of fractions "FR" of a polynomial ring with (at least) g+1 variables has been defined. It is called by "type_A.m" (with g=3), "type_C.m" (with g=2) and "type_D.m" (with g=2).
 
-The only data that is not produced from scratch when executing the file "execute.m" is that regarding the moments of N(U(3)). These data is produced by "computations_NU3.m". This file can be run separately. It calls the files "charactersUSp2g.m" (with g=3) and "charactersSU3.m".
- 
 The file "Characters_in_terms_of_coef.m" expresses the characters of USp(6) in terms of the coefficients of a generic characteristic polynomial. It calls the file "charactersUSp2g.m" and it is used to determine [Table 6, FKS21]. 
 
 
